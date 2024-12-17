@@ -24,7 +24,7 @@ const App = () => {
                     <Route path="/" element={<EventList />} />
                 <Route path="/eventform" element={<EventForm />} />
                     <Route path="/guests" element={<GuestList />} />
-                    <Route path="/vendors" element={<VendorList />} />
+                     <Route path="/vendors" element={<VendorList />} />
                     <Route path="/tasks" element={<TaskList />} />
                 </Routes>
             </div>

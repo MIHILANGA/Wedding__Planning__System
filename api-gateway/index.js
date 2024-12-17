@@ -15,7 +15,7 @@ app.use("/budget", createProxyMiddleware({ target: "http://budget-service:3004",
 app.use("/tasks", createProxyMiddleware({ target: "http://task-service:3005", changeOrigin: true }));
 app.use("/notifications", createProxyMiddleware({ target: "http://notification-service:3006", changeOrigin: true }));
 
-const PORT = 8081; // Ensure this matches your docker-compose.yml mapping
+const PORT = 8080; // Ensure this matches your docker-compose.yml mapping
 app.listen(PORT, () => {
     console.log(`API Gateway is running on port ${PORT}`);
 });

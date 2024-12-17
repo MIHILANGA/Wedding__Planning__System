@@ -8,5 +8,14 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+# Copy the rest of the application
+COPY . .
+
+# Set environment variable to run React on port 3007
+ENV PORT=3007
+
 # Expose the port
 EXPOSE 3007
+
+# Start the React application
+CMD ["npm", "start"]
