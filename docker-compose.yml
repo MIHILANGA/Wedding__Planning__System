@@ -5,7 +5,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3007:3000"
+      - "3007:3007"
     volumes:
       - ./frontend:/app
       - /app/node_modules # Prevents node_modules reinstallation
@@ -30,7 +30,7 @@ services:
       - app-network
 
   event-service:
-    build: ./services/event-management
+    build: ./services/event-management0024
     ports:
       - "3001:3001"
     environment:
@@ -41,7 +41,7 @@ services:
       - app-network
 
   guest-service:
-    build: ./services/guest-management
+    build: ./services/guest-management0024
     ports:
       - "3002:3002"
     environment:
@@ -52,7 +52,7 @@ services:
       - app-network
 
   vendor-service:
-    build: ./services/vendor-scheduling
+    build: ./services/vendor-scheduling0024
     ports:
       - "3003:3003"
     environment:
@@ -63,7 +63,7 @@ services:
       - app-network
 
   budget-service:
-    build: ./services/budget-tracking
+    build: ./services/budget-tracking0024
     ports:
       - "3004:3004"
     environment:
@@ -74,7 +74,7 @@ services:
       - app-network
 
   task-service:
-    build: ./services/task-management
+    build: ./services/task-management0024
     ports:
       - "3005:3005"
     environment:
@@ -85,7 +85,7 @@ services:
       - app-network
 
   notification-service:
-    build: ./services/notification
+    build: ./services/notification0024
     ports:
       - "3006:3006"
     environment:
