@@ -6,19 +6,19 @@ const EventList = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        API.get("/events")
+        API.get("/events0024")
             .then((response) => setEvents(response.data))
             .catch((error) => console.error(error));
     }, []);
 
     const deleteEvent = (id) => {
-        API.delete(`/event/${id}`)
+        API.delete(`/events0024/${id}`)
             .then(() => setEvents(events.filter((event) => event._id !== id)))
             .catch((error) => console.error(error));
     };
 
     const updateEvent = (id, updatedEvent) => {
-        API.put(`/events/${id}`, updatedEvent)
+        API.put(`/events0024/${id}`, updatedEvent)
             .then((response) => {
                 setEvents(events.map((event) => (event._id === id ? response.data : event)));
             })
